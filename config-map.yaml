@@ -4,14 +4,10 @@ metadata:
   name: ratelimit-config
 data:
   config.yaml: |
-    domain: foo-domain
+    domain: reviews
     descriptors:
-      - key: BAR
-        value: "/foo"
+      - key: PATH
+        value: "/productpage"
         rate_limit:
-          unit: minute
+          unit: second
           requests_per_unit: 1
-      - key: BAR
-        rate_limit:
-          unit: minute
-          requests_per_unit: 100
