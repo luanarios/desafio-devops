@@ -341,3 +341,19 @@ spec:
       - name: tmp
         emptyDir: {}
 ---
+##################################################################################################
+# Global rate limit
+##################################################################################################
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ratelimit-config
+data:
+  config.yaml: |
+    domain: productpage-ratelimit
+    descriptors:
+      - key: PATH
+        value: "/productpage"
+        rate_limit:
+          unit: second
+          requests_per_unit: 2
