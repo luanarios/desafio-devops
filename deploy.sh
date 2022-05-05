@@ -8,7 +8,7 @@ kubectl get svc
 echo "*** Pods (ns=default) ***"
 kubectl get pods
 
-# Configurando Ingress Gateway
+# Configuração do Ingress Gateway
 echo "*** Configurando Ingress Gateway ***"
 kubectl apply -f bookinfo-gateway.yaml
 echo "*** Validando Ingress Gateway ***"
@@ -25,16 +25,16 @@ export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o 
 # Obtendo GATEWAY_URL
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 
-# Inicializando Addons
-echo "*** Inicializando Addons ***"
+# Inicializando Addons do Istio
+echo "*** Inicializando Addons do Istio ***"
 cd istio-1.13.3
 kubectl apply -f samples/addons
 kubectl get pods --namespace=istio-system
 cd ..
 
-# Deploy do Destination Rule / Config Map
+# Configuração do Destination Rule / Config Map
 kubectl apply -f destination-rule.yaml
 kubectl apply -f user-route.yaml
 
-echo "$GATEWAY_URL"
+echo "*** Verificar status dos pods executando 'k get pods -n default'"
 echo "*** Acesso: http://$GATEWAY_URL/productpage ***"
