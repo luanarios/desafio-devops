@@ -41,41 +41,41 @@ Ferramentas necessárias para o deploy do projeto:
 
 Para facilitar a manipulação do kubernetes, vamos criar alguns alias do kubectl para utilizar no terminal do Linux.
 
-1- Adicione o arquivo ao diretório /home/
+1. Adicione o arquivo ``` .kubectl_aliases ``` ao diretório ``` /home/ ```
 
 ``` sudo cp .kubectl_aliases ~/ ```
 
-2- Escreva o comando para adicionar o arquivo à lista de alias:
+2. Escreva o comando para adicionar incluir os alias:
 
 ``` source .bashrc ```
 
-3- Liste os alias com o comando:
+3. Liste os alias com o comando:
 
 ``` alias ```
 
-## Inicializando cluster
+## Inicializando cluster e realizando deploy
 
-1- Após instalar o k3d, incialize o cluster com o comando abaixo:
+1. Após instalar o k3d, incialize o cluster com o comando abaixo:
 
 ``` k3d cluster create <nome-do-cluster> ```
 
-2- Adicione este repositório na sua máquina e dê a permissão para executar os scripts com:
+2. Adicione este repositório na sua máquina e dê a permissão para executar os scripts com:
 
 ``` chmod +x istio-install.sh ```
 ``` chmod +x deploy.sh ```
 ``` chmod +x dashboard.sh ```
 
-3- Na pasta do repositório, execute via terminal o script abaixo para fazer o download, instalar e configurar o Istio:
+3. Na pasta do repositório, execute via terminal o script abaixo para fazer o download, instalar e configurar o Istio:
 
 ``` source istio-install.sh ```
 
-4- Na pasta do repositório, execute via terminal o script abaixo para realizar o deploy da aplicação:
+4. Na pasta do repositório, execute via terminal o script abaixo para realizar o deploy da aplicação:
 
 ``` source deploy.sh ```
 
 Após a inicialização dos pods a aplicação estará disponível na URL exibida e aberta no navegador.
 
-5- Verifique o andamento da criação dos pods com os comandos:
+5. Verifique o andamento da criação dos pods com os comandos:
 
 ``` kgpo ```
 
@@ -83,11 +83,11 @@ Após a inicialização dos pods a aplicação estará disponível na URL exibid
 
 ## Utilizando ferramentas de monitoramento
 
-1- Para acessar as ferramentas de monitoramento, execute o script no terminal:
+1. Para acessar as ferramentas de monitoramento, execute o script no terminal:
 
 ``` source dashboard.sh ```
 
-2- Entre com o número da dashboard desejada, sendo 1- Grafana, 2- Kiali e 3- Prometheus.
+2. Entre com o número da dashboard desejada, sendo 1- Grafana, 2- Kiali e 3- Prometheus.
 
 
 
