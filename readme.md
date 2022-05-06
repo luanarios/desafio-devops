@@ -19,7 +19,7 @@ O ``` ratings ``` possui 3 versões que estão gerenciadas da seguinte forma:
 
 Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 
-* [Kubernetes](https://kubernetes.io/pt-br/): Responsável por implantar e gerenciar o cluster que contém os hosts da aplicação que realizaremos o deploy.
+* [k3d](https://k3d.io/v5.4.1/): Ferramenta que roda nós do kubernetes em contêineres do docker, sendo útil para desenvolvimento local de testes.
 * [Istio](https://istio.io/): Service mesh que facilita o gerenciamento de políticas, tráfego, recursos e comunicação entre diversos microserviços de uma aplicação. O Istio cria um data plane que interliga e controla a comunicação entre os serviços através de proxies. Essa arquitetura é bastante interessante pois permite, por exemplo, a criação de regras de gerenciamento de tráfego por fora da aplicação, já que isso será controlado via proxy. Por conta dessa estrutura, o Istio possibilita o uso de um serviço de telemetria que gera métricas, logs e rastreamento a partir do tráfego da aplicação. Nesse projeto utilizaremos o Kiali, Grafana e Prometheus como ferramentas para monitorar esses dados em tempo real. Além disso, o Istio foi utilizado para criar um ingress que permite acessar a aplicação fora do cluster.
 * [Envoy](https://www.envoyproxy.io/): Serviço de proxy utilizado junto ao Istio para gerar os proxies e o rate limit (limitação de requests por segundo para cada serviço).
 * [Kiali](https://kiali.io/): É um pacote que permite a visualização gráfica em tempo real de toda a estrutura do service mesh. O Kiali identifica possíveis erros e informa onde se encontra o ponto de falha, o que é muito proveitoso principalmente ao se tratar de grandes arquiteturas. Além disso, essa ferramenta permite realizar alguns testes como o Fault Injection, do qual ocasiona uma falha intencional em um serviço para verificar como a aplicação reage nesse cenário, permitindo mais uma vez encontrar melhorias para o mesh. Nesse projeto o Kiali também foi utilizado como gestor de logs.
@@ -31,9 +31,9 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 Ferramentas necessárias para o deploy do projeto:
 
 * SO Linux
-* K3d - https://k3d.io/v5.4.1/
-* Docker - https://docs.docker.com/get-docker/
-* Kubectl - https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+* [K3d](https://k3d.io/v5.4.1/)
+* [Docker](https://docs.docker.com/get-docker/)
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
 # Realizando deploy da aplicação
 
@@ -89,6 +89,13 @@ Após a inicialização dos pods a aplicação estará disponível na URL exibid
 
 2. Entre com o número da dashboard desejada, sendo 1- Grafana, 2- Kiali e 3- Prometheus.
 
+# Links úteis
 
+Principais fontes de informação utilizadas para o desenvolvimento do projeto:
 
-
+* [Kubernetes Docs](https://kubernetes.io/pt-br/docs/home/)
+* [Istio Docs](https://istio.io/latest/docs/)
+* [Envoy Docs](https://www.envoyproxy.io/docs/envoy/latest/)
+* [Kiali Docs](https://kiali.io/docs/)
+* [k3d Docs](https://k3d.io/v5.4.1/usage/configfile/)
+* [k3d Rodando primeira aplicação containerizada](https://www.linkedin.com/pulse/k3d-rodando-primeira-aplica%25C3%25A7%25C3%25A3o-containerizada-ntopus-labs/?trackingId=5g%2FqfR85LvnWnRo9K3dM2g%3D%3D)
