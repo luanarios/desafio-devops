@@ -25,6 +25,9 @@ export INGRESS_HOST=$(kubectl get po -l istio=ingressgateway -n istio-system -o 
 # Obtendo GATEWAY_URL
 export GATEWAY_URL=$INGRESS_HOST:$INGRESS_PORT
 
+# Removendo Traefik (causa conflito com o Istio Ingress)
+kubectl -n kube-system delete svc traefik
+
 # Inicializando Addons do Istio
 echo "*** Inicializando Addons do Istio ***"
 cd istio-1.13.3
