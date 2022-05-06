@@ -99,3 +99,4 @@ Principais fontes de informação utilizadas para o desenvolvimento do projeto:
 * [Kiali Docs](https://kiali.io/docs/)
 * [k3d Docs](https://k3d.io/v5.4.1/usage/configfile/)
 * [k3d Rodando primeira aplicação containerizada](https://www.linkedin.com/pulse/k3d-rodando-primeira-aplica%25C3%25A7%25C3%25A3o-containerizada-ntopus-labs/?trackingId=5g%2FqfR85LvnWnRo9K3dM2g%3D%3D)
+* [kubectl-aliases](https://github.com/ahmetb/kubectl-aliases)
