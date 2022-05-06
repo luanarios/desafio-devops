@@ -45,7 +45,7 @@ Para facilitar a manipulação do kubernetes, vamos criar alguns alias do kubect
 
 ``` sudo cp .kubectl_aliases ~/ ```
 
-2. Escreva o comando para adicionar incluir os alias:
+2. Escreva o comando para incluir os alias:
 
 ``` source .bashrc ```
 
