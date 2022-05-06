@@ -36,5 +36,13 @@ cd ..
 kubectl apply -f destination-rule.yaml
 kubectl apply -f user-route.yaml
 
+# Implementando Rate Limits
+kubectl apply -f ratelimit-details.yaml
+kubectl apply -f ratelimit-productpage.yaml
+kubectl apply -f ratelimit-reviews-v1.yaml
+kubectl apply -f ratelimit-reviews-v2.yaml
+kubectl apply -f ratelimit-reviews-v3.yaml
+
 echo "*** Verificar status dos pods executando 'k get pods -n default'"
 echo "*** Acesso: http://$GATEWAY_URL/productpage ***"
+google-chrome http://$GATEWAY_URL/productpage
