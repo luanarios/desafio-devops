@@ -11,8 +11,7 @@ export PATH=$PWD/bin:$PATH
 # Instalação
 istioctl install --set profile=demo -y
 
-# Habilitando Istio no namespace da aplicação (default) - será carregado 1 container da aplicação e 1 do proxy
+# Habilitando Istio no namespace da aplicação (default) - será carregado 1 container para a aplicação e 1 para o proxy
 kubectl label namespace default istio-injection=enabled
 
 cd ..
-
