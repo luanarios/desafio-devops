@@ -61,9 +61,9 @@ Para facilitar a manipulação do kubernetes, vamos criar alguns alias do kubect
 
 2. Adicione este repositório na sua máquina e dê a permissão para executar os scripts com:
 
-``` chmod +x istio-install.sh ```
-``` chmod +x deploy.sh ```
-``` chmod +x dashboard.sh ```
+<p>``` chmod +x istio-install.sh ```</p>
+<p>``` chmod +x deploy.sh ```</p>
+<p>``` chmod +x dashboard.sh ```</p>
 
 3. Na pasta do repositório, execute via terminal o script abaixo para fazer o download, instalar e configurar o Istio:
 
