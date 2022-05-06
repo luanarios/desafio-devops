@@ -47,7 +47,7 @@ Para facilitar a manipulação do kubernetes, vamos criar alguns alias do kubect
 
 2. Escreva o comando para incluir os alias:
 
-``` source .bashrc ```
+``` source .kubectl_aliases ```
 
 3. Liste os alias com o comando:
 
