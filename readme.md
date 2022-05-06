@@ -25,6 +25,7 @@ Tecnologias e ferramentas utilizadas no desenvolvimento do projeto:
 * [Kiali](https://kiali.io/): É um pacote que permite a visualização gráfica em tempo real de toda a estrutura do service mesh. O Kiali identifica possíveis erros e informa onde se encontra o ponto de falha, o que é muito proveitoso principalmente ao se tratar de grandes arquiteturas. Além disso, essa ferramenta permite realizar alguns testes como o Fault Injection, do qual ocasiona uma falha intencional em um serviço para verificar como a aplicação reage nesse cenário, permitindo mais uma vez encontrar melhorias para o mesh. Nesse projeto o Kiali também foi utilizado como gestor de logs.
 * [Grafana](https://grafana.com/): Permite a criação de dashboards dinâmicos para a exibição de gráficos em tempo real. Algumas dashboards são pré-configuradas pelo Istio.
 * [Prometheus](https://prometheus.io/): Serviço de monitoramento que obtém os dados da saúde do service mesh e integra-os ao Kiali e Grafana.
+* [Jaeger](https://www.jaegertracing.io/): Software utilizado para monitorar e solucionar problemas em ambientes de microserviços. Possui implementação que rastreia todos os serviços envolvidos para atender a uma solicitação.
 
 ## Pré-requisitos
 
